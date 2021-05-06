@@ -1,0 +1,18 @@
+// Запрос
+USE TestTask
+
+SELECT 
+	Products.NameProduct,
+	Categories.NameCategory
+FROM Products
+LEFT JOIN CategoryProduct ON Products.IdProduct = CategoryProduct.ProductId
+LEFT JOIN Categories ON Categories.IdCategory = CategoryProduct.CategoryId
+
+// Результат
+Product1	Category1
+Product2	Category2
+Product2	Category3
+Product3	Category4
+Product4	Category4
+Product5	Category1
+Product6	NULL
